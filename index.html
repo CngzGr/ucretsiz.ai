@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>ücretsiz.ai — Türkiye'nin Ücretsiz Yapay Zeka Platformu | Ücretsiz AI Modelleri</title>
+  <meta name="description" content="Ücretsiz yapay zeka modellerini keşfedin, karşılaştırın ve hemen deneyin. OpenRouter üzerinden Gemini, Llama, DeepSeek, Qwen ve daha fazla ücretsiz AI modeliyle sohbet edin.">
+  <meta name="keywords" content="ücretsiz yapay zeka, free AI, AI modelleri, ChatGPT alternatifi, ücretsiz AI chat, yapay zeka sohbet, OpenRouter, Gemini, Llama, DeepSeek, Türkçe AI">
+  <meta name="author" content="ücretsiz.ai">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ucretsiz.ai/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ücretsiz.ai — Türkiye'nin Ücretsiz AI Platformu">
+  <meta property="og:description" content="Ücretsiz yapay zeka modellerini keşfedin, karşılaştırın ve hemen deneyin. 30+ ücretsiz AI modeli tek platformda.">
+  <meta property="og:url" content="https://ucretsiz.ai/">
+  <meta property="og:site_name" content="ücretsiz.ai">
+  <meta property="og:image" content="https://ucretsiz.ai/assets/og-image.png">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ücretsiz.ai — Türkiye'nin Ücretsiz AI Platformu">
+  <meta name="twitter:description" content="Ücretsiz yapay zeka modellerini keşfedin ve hemen deneyin.">
+  <meta name="twitter:image" content="https://ucretsiz.ai/assets/og-image.png">
+  
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="tr" href="https://ucretsiz.ai/">
+  <link rel="alternate" hreflang="en" href="https://ucretsiz.ai/">
+  <link rel="alternate" hreflang="x-default" href="https://ucretsiz.ai/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
+  <link rel="apple-touch-icon" href="/assets/logo.jpg">
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ücretsiz.ai",
+    "alternateName": "Ücretsiz AI",
+    "url": "https://ucretsiz.ai",
+    "description": "Türkiye'nin ücretsiz yapay zeka platformu. Ücretsiz AI modellerini keşfedin ve deneyin.",
+    "inLanguage": ["tr", "en"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ucretsiz.ai/models.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ücretsiz.ai",
+    "url": "https://ucretsiz.ai",
+    "logo": "https://ucretsiz.ai/assets/logo.jpg",
+    "description": "Türkiye'nin ücretsiz yapay zeka platformu",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <a href="/" class="nav-brand" aria-label="ücretsiz.ai Ana Sayfa">
+        <img src="/assets/logo.jpg" alt="ücretsiz.ai logo" width="32" height="32" class="nav-logo">
+        <span class="nav-brand-text">ücretsiz<span class="text-primary">.ai</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Ana navigasyon">
+        <a href="/" class="active" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="/models.html" data-i18n="nav.models">AI Modeller</a>
+        <a href="/hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn btn-ghost btn-sm" aria-label="Dili değiştir">EN</button>
+        <button id="theme-toggle" class="btn btn-ghost btn-icon" aria-label="Tema değiştir"></button>
+        <button id="settings-btn" class="btn btn-ghost btn-icon" aria-label="Ayarlar" title="Ayarlar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </button>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title" data-i18n="hero.title">
+            Türkiye'nin Ücretsiz <span class="text-gradient">AI Platformu</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Ücretsiz yapay zeka modellerini keşfedin, karşılaştırın ve hemen deneyin. OpenRouter üzerinden ücretsiz AI modelleriyle sohbet edin.
+          </p>
+          <div class="hero-actions">
+            <a href="#chat-section" class="btn btn-primary btn-lg" data-i18n="hero.cta.chat">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              Hemen Sohbet Et
+            </a>
+            <a href="/models.html" class="btn btn-secondary btn-lg" data-i18n="hero.cta.models">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              Modelleri Keşfet
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">30+</span>
+              <span class="stat-label" data-i18n="hero.stat.models">AI Model</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label" data-i18n="hero.stat.free">Ücretsiz</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label" data-i18n="hero.stat.providers">Sağlayıcı</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CHAT SECTION ========== -->
+    <section class="section-padding" id="chat-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="chat.title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            AI Sohbet
+          </h2>
+          <p class="text-secondary">OpenRouter ücretsiz modelleriyle hemen sohbet edin</p>
+        </div>
+        
+        <div id="chat-container" class="chat-container">
+          <!-- Chat Sidebar -->
+          <aside class="chat-sidebar">
+            <div class="chat-sidebar-header">
+              <button id="chat-new-btn" class="btn btn-primary btn-sm" style="width: 100%;" data-i18n="chat.new">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                Yeni Sohbet
+              </button>
+            </div>
+            <div id="chat-history-list" class="chat-history-list">
+              <!-- Sohbet geçmişi JS ile doldurulur -->
+            </div>
+          </aside>
+
+          <!-- Chat Main Area -->
+          <div class="chat-main">
+            <!-- Chat Header -->
+            <div class="chat-header">
+              <button id="chat-sidebar-toggle" class="btn btn-ghost btn-icon hide-desktop" aria-label="Sohbet geçmişi">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              </button>
+              <div class="chat-model-selector">
+                <label for="chat-model-select" class="sr-only" data-i18n="chat.model.select">Model Seçin</label>
+                <select id="chat-model-select" class="select">
+                  <!-- JS ile doldurulur -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chat-messages" class="chat-messages" role="log" aria-live="polite">
+              <!-- JS ile doldurulur -->
+            </div>
+
+            <!-- Typing Indicator -->
+            <div id="chat-typing" class="chat-typing" style="display: none;">
+              <div class="typing-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span data-i18n="chat.typing">Yanıt yazıyor...</span>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-area">
+              <div class="chat-input">
+                <textarea 
+                  rows="1" 
+                  placeholder="Mesajınızı yazın..." 
+                  data-i18n="chat.placeholder" 
+                  data-i18n-target="placeholder"
+                  aria-label="Mesaj girin"
+                ></textarea>
+                <button id="chat-send-btn" class="chat-send-btn btn btn-primary btn-icon" aria-label="Gönder">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </button>
+                <button id="chat-stop-btn" class="chat-send-btn btn btn-danger btn-icon" aria-label="Durdur" style="display: none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+                </button>
+              </div>
+              <p class="chat-disclaimer text-muted text-sm">
+                Ücretsiz modeller kullanılmaktadır. Yanıtlar her zaman doğru olmayabilir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== POPULAR MODELS SECTION ========== -->
+    <section class="section-padding" id="popular-models" style="background: var(--color-surface);">
+      <div class="container">
+        <div class="section-header">
+          <h2>🔥 Popüler Ücretsiz Modeller</h2>
+          <a href="/models.html" class="btn btn-ghost btn-sm" data-i18n="hero.cta.models">Tümünü Gör →</a>
+        </div>
+        <div class="grid" id="featured-models-grid" style="--grid-min: 280px;">
+          <!-- JS ile doldurulur -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES SECTION ========== -->
+    <section class="section-padding" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Neden ücretsiz.ai?</h2>
+        </div>
+        <div class="grid" style="--grid-min: 250px;">
+          <div class="card">
+            <div class="card-body">
+              <div class="feature-icon">🆓</div>
+              <h3>Tamamen Ücretsiz</h3>
+              <p class="text-secondary">Ücretsiz AI modellerine tek platformdan erişin. Kredi kartı gerekmez.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="feature-icon">🇹🇷</div>
+              <h3>Türkçe Odaklı</h3>
+              <p class="text-secondary">Türkçe performans skorlarıyla en iyi modeli seçin. Arayüz tamamen Türkçe.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="feature-icon">⚡</div>
+              <h3>Anında Deneme</h3>
+              <p class="text-secondary">Modelleri karşılaştırın ve chat ile hemen deneyin. Kayıt gerektirmez.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="feature-icon">🔍</div>
+              <h3>30+ Model</h3>
+              <p class="text-secondary">Google, Meta, DeepSeek, Mistral, Qwen ve daha fazlasından AI modelleri.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="feature-icon">🛡️</div>
+              <h3>Güvenli</h3>
+              <p class="text-secondary">API anahtarınız sadece tarayıcınızda saklanır. Sunucuya gönderilmez.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="feature-icon">📖</div>
+              <h3>Açık Kaynak</h3>
+              <p class="text-secondary">Tüm kaynak kodu GitHub'da açık. Katkıda bulunabilirsiniz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-brand">
+            <img src="/assets/logo.jpg" alt="ücretsiz.ai" width="32" height="32">
+            <span>ücretsiz<span class="text-primary">.ai</span></span>
+          </a>
+          <p class="text-secondary" data-i18n="footer.description">
+            Türkiye'nin ücretsiz yapay zeka platformu. Ücretsiz AI modellerini keşfedin ve deneyin.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.links">Hızlı Bağlantılar</h4>
+          <ul>
+            <li><a href="/" data-i18n="nav.home">Ana Sayfa</a></li>
+            <li><a href="/models.html" data-i18n="nav.models">AI Modeller</a></li>
+            <li><a href="/hakkimizda.html" data-i18n="nav.about">Hakkımızda</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.resources">Kaynaklar</h4>
+          <ul>
+            <li><a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a></li>
+            <li><a href="https://ai.google.dev" target="_blank" rel="noopener">Google AI Studio</a></li>
+            <li><a href="https://groq.com" target="_blank" rel="noopener">Groq</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.legal">Yasal</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.privacy">Gizlilik Politikası</a></li>
+            <li><a href="#" data-i18n="footer.terms">Kullanım Şartları</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 ücretsiz.ai — Tüm hakları saklıdır.</p>
+        <p data-i18n="footer.made">❤️ ile Türkiye'de yapıldı</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SETTINGS MODAL ========== -->
+  <div id="settings-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="settings-title" data-i18n="settings.title">Ayarlar</h3>
+        <button class="modal-close btn btn-ghost btn-icon" aria-label="Kapat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-group">
+          <label for="api-key-input" class="settings-label" data-i18n="settings.apikey">OpenRouter API Anahtarı</label>
+          <div class="input-group">
+            <input type="password" id="api-key-input" class="input" placeholder="sk-or-v1-xxxx..." data-i18n="settings.apikey.placeholder" data-i18n-target="placeholder">
+          </div>
+          <p class="text-sm text-muted" style="margin-top: 0.5rem;">
+            <span data-i18n="settings.apikey.help">openrouter.ai adresinden ücretsiz API anahtarı alabilirsiniz.</span>
+            <a href="https://openrouter.ai/keys" target="_blank" rel="noopener" class="text-primary"> openrouter.ai/keys →</a>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="settings-save btn btn-primary" data-i18n="settings.save">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TOAST CONTAINER ========== -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="/js/theme.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/chat.js"></script>
+  
+  <!-- Popüler modelleri yükle (ana sayfa için) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('/data/models.json');
+        const models = await response.json();
+        const featured = models
+          .filter(m => m.featured || m.openRouterFree)
+          .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+          .slice(0, 6);
+        
+        const lang = I18n.getLang();
+        const grid = document.getElementById('featured-models-grid');
+        if (!grid) return;
+
+        grid.innerHTML = featured.map(model => {
+          const desc = model.description?.[lang] || model.description?.tr || '';
+          const isFree = model.pricing?.type === 'free' || model.openRouterFree;
+          return `
+            <a href="/models/${model.slug}.html" class="card model-card">
+              <div class="card-header">
+                <div class="model-card-provider">
+                  <span class="provider-dot" style="background: ${model.providerColor || '#6366f1'}"></span>
+                  <span class="provider-name">${model.provider}</span>
+                </div>
+                ${isFree ? '<span class="badge badge-free">Ücretsiz</span>' : '<span class="badge badge-paid">Ücretli</span>'}
+              </div>
+              <div class="card-body">
+                <h3 class="model-card-name">${model.name}</h3>
+                <p class="model-card-desc line-clamp-2">${desc}</p>
+              </div>
+              <div class="card-footer">
+                <span class="spec-chip">${model.specs?.contextWindow ? App.formatTokens(model.specs.contextWindow) + ' context' : ''}</span>
+                <span class="btn btn-ghost btn-sm">Detay →</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      } catch (e) {
+        console.warn('Featured models yüklenemedi:', e);
+      }
+    });
+  </script>
+</body>
+</html>

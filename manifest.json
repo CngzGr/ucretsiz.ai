@@ -1,0 +1,24 @@
+{
+  "name": "ücretsiz.ai",
+  "short_name": "ücretsiz.ai",
+  "description": "Ücretsiz Yapay Zeka Platformu — Ücretsiz AI modellerini keşfedin ve deneyin.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/assets/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "utilities",
+    "education",
+    "productivity"
+  ]
+}

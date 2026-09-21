@@ -1,0 +1,1922 @@
+[
+  {
+    "id": "google/gemini-2.0-flash",
+    "name": "Gemini 2.0 Flash",
+    "slug": "gemini-2-0-flash",
+    "provider": "Google",
+    "providerSlug": "google",
+    "providerUrl": "https://deepmind.google/technologies/gemini/",
+    "providerColor": "#4285F4",
+    "description": {
+      "tr": "Google'ın en yeni nesil çok modlu (multimodal), hızlı ve verimli modeli.",
+      "en": "Google's next generation multimodal, fast and efficient model."
+    },
+    "descriptionLong": {
+      "tr": "Gemini 2.0 Flash, metin, ses, kod ve görsel alanlarında devasa bağlam penceresiyle yüksek hız sunar. Önceki nesillere kıyasla akıl yürütme kapasitesi artırılmıştır.",
+      "en": "Gemini 2.0 Flash delivers high speed with a massive context window across text, audio, code, and vision. It has enhanced reasoning capabilities compared to previous generations."
+    },
+    "category": "multimodal",
+    "tags": {
+      "tr": ["ücretsiz", "multimodal", "hızlı", "kod"],
+      "en": ["free", "multimodal", "fast", "code"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Unlimited on OpenRouter free"
+    },
+    "specs": {
+      "contextWindow": 1048576,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-12",
+      "languages": ["tr", "en", "de", "fr", "es"],
+      "modalities": ["text", "image", "audio", "video"],
+      "parameters": "Unknown",
+      "architecture": "Transformer/MoE",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": true,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": true,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["Görsel analizi", "Büyük belge özetleme", "Hızlı kod yazımı"],
+      "en": ["Vision analysis", "Large document summarization", "Fast coding"]
+    },
+    "tools": {
+      "ides": ["Cursor", "VS Code"],
+      "agents": ["Google AI Studio"],
+      "platforms": ["OpenRouter", "Google AI Studio"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "google/gemini-2.0-flash:free",
+    "featured": true,
+    "popularity": 95,
+    "turkishScore": 95
+  },
+  {
+    "id": "google/gemini-1.5-pro",
+    "name": "Gemini 1.5 Pro",
+    "slug": "gemini-1-5-pro",
+    "provider": "Google",
+    "providerSlug": "google",
+    "providerUrl": "https://deepmind.google/technologies/gemini/",
+    "providerColor": "#4285F4",
+    "description": {
+      "tr": "Karmaşık akıl yürütme gerektiren büyük bağlamlı görevler için tasarlanmış Pro versiyon.",
+      "en": "Pro version designed for large-context tasks requiring complex reasoning."
+    },
+    "descriptionLong": {
+      "tr": "Gemini 1.5 Pro, inanılmaz 2 Milyon token bağlam penceresiyle tüm kitapları, büyük kod depolarını ve saatlerce süren videoları analiz edebilir.",
+      "en": "With an incredible 2 Million token context window, Gemini 1.5 Pro can analyze entire books, massive code repositories, and hours of video."
+    },
+    "category": "multimodal",
+    "tags": {
+      "tr": ["uzun bağlam", "profesyonel", "kod"],
+      "en": ["long context", "professional", "code"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 1.25,
+      "outputPer1M": 5,
+      "freeLimit": "50 RPD on Google AI Studio"
+    },
+    "specs": {
+      "contextWindow": 2000000,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-04",
+      "languages": ["tr", "en", "de", "fr"],
+      "modalities": ["text", "image", "audio", "video"],
+      "parameters": "Unknown",
+      "architecture": "Transformer/MoE",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": true,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": true,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["Derinlemesine veri analizi", "Sistem mimarisi", "Uzun video analizi"],
+      "en": ["In-depth data analysis", "System architecture", "Long video analysis"]
+    },
+    "tools": {
+      "ides": ["Cursor"],
+      "agents": [],
+      "platforms": ["OpenRouter", "Google AI Studio"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "google/gemini-1.5-pro",
+    "featured": true,
+    "popularity": 92,
+    "turkishScore": 95
+  },
+  {
+    "id": "google/gemma-2-9b",
+    "name": "Gemma 2 9B",
+    "slug": "gemma-2-9b",
+    "provider": "Google",
+    "providerSlug": "google",
+    "providerUrl": "https://ai.google.dev/gemma",
+    "providerColor": "#4285F4",
+    "description": {
+      "tr": "Google'ın açık ağırlıklı (open weight) verimli, kompakt modeli.",
+      "en": "Google's open-weights efficient, compact model."
+    },
+    "descriptionLong": {
+      "tr": "Kendi sınıfının en iyilerinden olan Gemma 2 9B, cihaz içi uygulamalar için ideal boyutlarda yüksek performans sağlar.",
+      "en": "One of the best in its class, Gemma 2 9B provides high performance in a compact size ideal for on-device applications."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["açık kaynak", "hafif", "metin"],
+      "en": ["open source", "lightweight", "text"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Completely free"
+    },
+    "specs": {
+      "contextWindow": 8192,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-05",
+      "languages": ["tr", "en"],
+      "modalities": ["text"],
+      "parameters": "9B",
+      "architecture": "Transformer",
+      "license": "Gemma License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": false,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Yerel çalıştırma", "Basit asistanlar"],
+      "en": ["Local execution", "Simple assistants"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["LM Studio", "Ollama", "OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "google/gemma-2-9b-it:free",
+    "featured": false,
+    "popularity": 80,
+    "turkishScore": 75
+  },
+  {
+    "id": "meta/llama-3.3-70b",
+    "name": "Llama 3.3 70B Instruct",
+    "slug": "llama-3-3-70b-instruct",
+    "provider": "Meta",
+    "providerSlug": "meta",
+    "providerUrl": "https://llama.meta.com/",
+    "providerColor": "#0668E1",
+    "description": {
+      "tr": "Meta'nın Llama 3 serisindeki son büyük açık ağırlıklı modeli.",
+      "en": "Meta's latest large open-weights model in the Llama 3 series."
+    },
+    "descriptionLong": {
+      "tr": "Llama 3.3 70B Instruct, 400B sınıfı modellere rakip olabilecek performans sunarak endüstri standardı haline geldi.",
+      "en": "Llama 3.3 70B Instruct provides performance rivaling 400B class models, becoming an industry standard for open models."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["açık kaynak", "ücretsiz", "güçlü"],
+      "en": ["open source", "free", "powerful"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Unlimited on OpenRouter free"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-12",
+      "languages": ["tr", "en", "es", "de", "fr"],
+      "modalities": ["text"],
+      "parameters": "70B",
+      "architecture": "Transformer",
+      "license": "Llama 3 License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Genel sohbet", "Kapsamlı metin üretimi", "Veri çıkarma"],
+      "en": ["General chat", "Comprehensive text generation", "Data extraction"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter", "Groq"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "meta-llama/llama-3.3-70b-instruct:free",
+    "featured": true,
+    "popularity": 94,
+    "turkishScore": 85
+  },
+  {
+    "id": "meta/llama-3.1-8b",
+    "name": "Llama 3.1 8B Instruct",
+    "slug": "llama-3-1-8b-instruct",
+    "provider": "Meta",
+    "providerSlug": "meta",
+    "providerUrl": "https://llama.meta.com/",
+    "providerColor": "#0668E1",
+    "description": {
+      "tr": "Geliştiriciler için hızlı ve hafif Llama 3.1 modeli.",
+      "en": "Fast and lightweight Llama 3.1 model for developers."
+    },
+    "descriptionLong": {
+      "tr": "Yerel donanımlarda bile kolayca çalışabilen, ancak kendisinden çok daha büyük modellerin performansını sunan 8 milyar parametreli bir canavar.",
+      "en": "An 8-billion parameter beast that runs easily even on local hardware, while providing the performance of models much larger than itself."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["hafif", "hızlı", "açık kaynak"],
+      "en": ["lightweight", "fast", "open source"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-03",
+      "languages": ["tr", "en"],
+      "modalities": ["text"],
+      "parameters": "8B",
+      "architecture": "Transformer",
+      "license": "Llama 3 License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Mobil uygulamalar", "Edge computing", "Hızlı botlar"],
+      "en": ["Mobile apps", "Edge computing", "Fast bots"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Groq", "Ollama", "OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "meta-llama/llama-3.1-8b-instruct:free",
+    "featured": false,
+    "popularity": 88,
+    "turkishScore": 75
+  },
+  {
+    "id": "meta/llama-3.2-11b-vision",
+    "name": "Llama 3.2 11B Vision",
+    "slug": "llama-3-2-11b-vision",
+    "provider": "Meta",
+    "providerSlug": "meta",
+    "providerUrl": "https://llama.meta.com/",
+    "providerColor": "#0668E1",
+    "description": {
+      "tr": "Görsel işleme yeteneğine sahip Llama varyantı.",
+      "en": "Llama variant with vision processing capabilities."
+    },
+    "descriptionLong": {
+      "tr": "Meta'nın görselleri analiz edip anlayabilen küçük boyutlu, ancak yetenekli modeli. OCR ve görsel soru cevaplama (VQA) konusunda iyidir.",
+      "en": "Meta's small but capable model that can analyze and understand images. Good at OCR and visual question answering (VQA)."
+    },
+    "category": "multimodal",
+    "tags": {
+      "tr": ["görsel", "multimodal", "açık kaynak"],
+      "en": ["vision", "multimodal", "open source"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-08",
+      "languages": ["tr", "en"],
+      "modalities": ["text", "image"],
+      "parameters": "11B",
+      "architecture": "Transformer",
+      "license": "Llama 3.2 License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": false,
+      "imageUnderstanding": true,
+      "imageGeneration": false,
+      "functionCalling": false,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["OCR işlemleri", "Görselden metne", "Menü/fiş okuma"],
+      "en": ["OCR processing", "Image to text", "Menu/receipt reading"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "meta-llama/llama-3.2-11b-vision-instruct:free",
+    "featured": false,
+    "popularity": 82,
+    "turkishScore": 75
+  },
+  {
+    "id": "deepseek/v3",
+    "name": "DeepSeek V3",
+    "slug": "deepseek-v3",
+    "provider": "DeepSeek",
+    "providerSlug": "deepseek",
+    "providerUrl": "https://deepseek.com/",
+    "providerColor": "#5B6EE1",
+    "description": {
+      "tr": "Düşük maliyetli, yüksek performanslı çığır açan MoE modeli.",
+      "en": "Low-cost, high-performance groundbreaking MoE model."
+    },
+    "descriptionLong": {
+      "tr": "GPT-4 ve Claude 3.5 Sonnet seviyesinde performans sunan, kod yazımı ve matematikte aşırı yetenekli, devrim niteliğinde açık ağırlıklı bir yapay zeka.",
+      "en": "A revolutionary open-weights AI that provides GPT-4 and Claude 3.5 Sonnet level performance, exceptionally capable in coding and math."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["kod", "matematik", "açık kaynak", "ücretsiz"],
+      "en": ["code", "math", "open source", "free"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-12",
+      "languages": ["tr", "en", "zh"],
+      "modalities": ["text"],
+      "parameters": "671B",
+      "architecture": "MoE",
+      "license": "MIT"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["İleri düzey programlama", "Karmaşık problem çözme", "Büyük ölçekli veri analizi"],
+      "en": ["Advanced programming", "Complex problem solving", "Large scale data analysis"]
+    },
+    "tools": {
+      "ides": ["Cursor", "Cline"],
+      "agents": ["Aider"],
+      "platforms": ["OpenRouter", "DeepSeek API"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "deepseek/deepseek-chat:free",
+    "featured": true,
+    "popularity": 98,
+    "turkishScore": 88
+  },
+  {
+    "id": "deepseek/r1",
+    "name": "DeepSeek R1",
+    "slug": "deepseek-r1",
+    "provider": "DeepSeek",
+    "providerSlug": "deepseek",
+    "providerUrl": "https://deepseek.com/",
+    "providerColor": "#5B6EE1",
+    "description": {
+      "tr": "OpenAI o1 seviyesinde, şeffaf akıl yürütme (reasoning) sunan model.",
+      "en": "OpenAI o1 level model providing transparent reasoning."
+    },
+    "descriptionLong": {
+      "tr": "R1, her türlü soruyu cevaplamadan önce uzun bir akıl yürütme zinciri kullanır (Chain-of-Thought). Çok zor matematik, kodlama ve mantık problemlerinde harikalar yaratır.",
+      "en": "R1 uses a long Chain-of-Thought reasoning process before answering any question. It works wonders on very hard math, coding, and logic problems."
+    },
+    "category": "reasoning",
+    "tags": {
+      "tr": ["akıl yürütme", "kod", "mantık", "ücretsiz"],
+      "en": ["reasoning", "code", "logic", "free"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-12",
+      "languages": ["tr", "en", "zh"],
+      "modalities": ["text"],
+      "parameters": "671B",
+      "architecture": "MoE",
+      "license": "MIT"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Algoritma tasarımı", "Araştırma makaleleri analizi", "Derin matematik"],
+      "en": ["Algorithm design", "Research paper analysis", "Deep mathematics"]
+    },
+    "tools": {
+      "ides": ["Cursor"],
+      "agents": ["Aider"],
+      "platforms": ["OpenRouter", "DeepSeek API"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "deepseek/deepseek-r1:free",
+    "featured": true,
+    "popularity": 99,
+    "turkishScore": 85
+  },
+  {
+    "id": "deepseek/coder-v2",
+    "name": "DeepSeek Coder V2",
+    "slug": "deepseek-coder-v2",
+    "provider": "DeepSeek",
+    "providerSlug": "deepseek",
+    "providerUrl": "https://deepseek.com/",
+    "providerColor": "#5B6EE1",
+    "description": {
+      "tr": "Geliştiriciler için özelleşmiş üst düzey kodlama asistanı.",
+      "en": "Specialized high-end coding assistant for developers."
+    },
+    "descriptionLong": {
+      "tr": "Yüzlerce programlama dili bilen, çok büyük projelerin kod deposunu anlayabilen ve kod tamamlama yapabilen özel bir versiyon.",
+      "en": "A specialized version that knows hundreds of programming languages, can understand massive project repositories, and perform code completion."
+    },
+    "category": "code",
+    "tags": {
+      "tr": ["kodlama", "yazılım"],
+      "en": ["coding", "software"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 0.14,
+      "outputPer1M": 0.28,
+      "freeLimit": "Paid API only"
+    },
+    "specs": {
+      "contextWindow": 128000,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-05",
+      "languages": ["en"],
+      "modalities": ["text"],
+      "parameters": "236B",
+      "architecture": "MoE",
+      "license": "DeepSeek License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Büyük proje refactoring", "Bug tespiti", "Test yazımı"],
+      "en": ["Large project refactoring", "Bug detection", "Writing tests"]
+    },
+    "tools": {
+      "ides": ["VS Code", "JetBrains"],
+      "agents": ["Aider", "Cline"],
+      "platforms": ["DeepSeek API", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "deepseek/deepseek-coder",
+    "featured": false,
+    "popularity": 85,
+    "turkishScore": 60
+  },
+  {
+    "id": "qwen/qwen-2.5-72b",
+    "name": "Qwen 2.5 72B",
+    "slug": "qwen-2-5-72b",
+    "provider": "Alibaba",
+    "providerSlug": "alibaba",
+    "providerUrl": "https://qwenlm.github.io/",
+    "providerColor": "#FF6A00",
+    "description": {
+      "tr": "Mükemmel Türkçe desteğiyle öne çıkan, Alibaba'nın açık kaynak şaheseri.",
+      "en": "Alibaba's open-source masterpiece standing out with excellent Turkish support."
+    },
+    "descriptionLong": {
+      "tr": "Qwen 2.5 serisi özellikle kod, matematik ve dil yeteneklerinde çığır açmıştır. Türkçe gramer, atasözü ve nüanslara hakimiyeti çoğu Amerikan modelinden iyidir.",
+      "en": "The Qwen 2.5 series makes breakthroughs especially in code, math, and language capabilities. Its mastery of Turkish grammar and nuances surpasses most American models."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["türkçe", "açık kaynak", "güçlü"],
+      "en": ["turkish", "open source", "powerful"]
+    },
+    "pricing": {
+      "type": "freemium",
+      "inputPer1M": 0.40,
+      "outputPer1M": 0.40,
+      "freeLimit": "Free options on some hubs"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-09",
+      "languages": ["tr", "en", "zh", "ar", "ru"],
+      "modalities": ["text"],
+      "parameters": "72B",
+      "architecture": "Transformer",
+      "license": "Apache 2.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Yerel dil desteği gerektiren chatbotlar", "Metin çevirisi", "Uzun metin yazarlığı"],
+      "en": ["Chatbots requiring native language support", "Text translation", "Long form writing"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter", "Hugging Face"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "qwen/qwen-2.5-72b-instruct",
+    "featured": true,
+    "popularity": 91,
+    "turkishScore": 95
+  },
+  {
+    "id": "qwen/qwen-2.5-coder-32b",
+    "name": "Qwen 2.5 Coder 32B",
+    "slug": "qwen-2-5-coder-32b",
+    "provider": "Alibaba",
+    "providerSlug": "alibaba",
+    "providerUrl": "https://qwenlm.github.io/",
+    "providerColor": "#FF6A00",
+    "description": {
+      "tr": "Hem ücretsiz hem de olağanüstü yetenekli açık kod modeli.",
+      "en": "An exceptionally capable open code model that is also free."
+    },
+    "descriptionLong": {
+      "tr": "GPT-4 seviyesinde kod yazabilen ancak sadece 32 milyar parametreli olmasıyla inanılmaz verimli bir yazılım asistanı. OpenRouter'da ücretsizdir.",
+      "en": "An incredibly efficient software assistant that codes at GPT-4 level despite being only 32 billion parameters. Free on OpenRouter."
+    },
+    "category": "code",
+    "tags": {
+      "tr": ["kod", "ücretsiz", "hızlı"],
+      "en": ["code", "free", "fast"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-09",
+      "languages": ["tr", "en", "zh"],
+      "modalities": ["text"],
+      "parameters": "32B",
+      "architecture": "Transformer",
+      "license": "Apache 2.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["VS Code entegrasyonu", "Otonom yazılım ajanları", "Açık kaynak projeler"],
+      "en": ["VS Code integration", "Autonomous software agents", "Open source projects"]
+    },
+    "tools": {
+      "ides": ["Cursor", "VS Code"],
+      "agents": ["Aider"],
+      "platforms": ["OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "qwen/qwen-2.5-coder-32b-instruct:free",
+    "featured": true,
+    "popularity": 93,
+    "turkishScore": 88
+  },
+  {
+    "id": "qwen/qwen-2.5-7b",
+    "name": "Qwen 2.5 7B",
+    "slug": "qwen-2-5-7b",
+    "provider": "Alibaba",
+    "providerSlug": "alibaba",
+    "providerUrl": "https://qwenlm.github.io/",
+    "providerColor": "#FF6A00",
+    "description": {
+      "tr": "Hafif ve çok dilli, dizüstü bilgisayarlarda çalışabilen kompakt model.",
+      "en": "Lightweight, multilingual compact model that runs on laptops."
+    },
+    "descriptionLong": {
+      "tr": "Küçük boyutuna rağmen mükemmel Türkçe bilen, yerel cihazlarda gizlilik endişesi olmadan kullanabileceğiniz açık kaynaklı model.",
+      "en": "Despite its small size, it has excellent Turkish proficiency. An open-source model you can use on local devices without privacy concerns."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["hafif", "yerel", "türkçe"],
+      "en": ["lightweight", "local", "turkish"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free everywhere"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-09",
+      "languages": ["tr", "en", "zh"],
+      "modalities": ["text"],
+      "parameters": "7B",
+      "architecture": "Transformer",
+      "license": "Apache 2.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Kişisel asistan", "Çevrimdışı kullanım", "Hızlı yanıtlı API"],
+      "en": ["Personal assistant", "Offline use", "Fast response API"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Ollama", "LM Studio"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "qwen/qwen-2.5-7b-instruct:free",
+    "featured": false,
+    "popularity": 78,
+    "turkishScore": 90
+  },
+  {
+    "id": "mistral/mistral-small",
+    "name": "Mistral Small",
+    "slug": "mistral-small",
+    "provider": "Mistral AI",
+    "providerSlug": "mistral",
+    "providerUrl": "https://mistral.ai/",
+    "providerColor": "#F7931E",
+    "description": {
+      "tr": "Mistral'in düşük gecikmeli, maliyet etkin ve hızlı kurumsal modeli.",
+      "en": "Mistral's low-latency, cost-effective and fast enterprise model."
+    },
+    "descriptionLong": {
+      "tr": "Gelişmiş RAG yeteneklerine sahip Mistral Small, hız ve maliyet avantajıyla kurumsal iş akışları için optimize edilmiştir.",
+      "en": "Featuring advanced RAG capabilities, Mistral Small is optimized for enterprise workflows with speed and cost advantages."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["hızlı", "kurumsal", "RAG"],
+      "en": ["fast", "enterprise", "RAG"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 0.20,
+      "outputPer1M": 0.60,
+      "freeLimit": "Le Chat free usage"
+    },
+    "specs": {
+      "contextWindow": 32768,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-01",
+      "languages": ["en", "fr", "de", "es", "it"],
+      "modalities": ["text"],
+      "parameters": "Unknown",
+      "architecture": "Transformer",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Kurumsal RAG", "Avrupa dilleri çevirisi", "Müşteri hizmetleri"],
+      "en": ["Enterprise RAG", "European languages translation", "Customer service"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Mistral API"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "mistralai/mistral-small",
+    "featured": false,
+    "popularity": 75,
+    "turkishScore": 60
+  },
+  {
+    "id": "mistral/mistral-nemo",
+    "name": "Mistral Nemo 12B",
+    "slug": "mistral-nemo-12b",
+    "provider": "Mistral AI",
+    "providerSlug": "mistral",
+    "providerUrl": "https://mistral.ai/",
+    "providerColor": "#F7931E",
+    "description": {
+      "tr": "Nvidia ve Mistral işbirliğiyle üretilmiş, 128K bağlamlı ücretsiz model.",
+      "en": "Free 128K context model built in collaboration by Nvidia and Mistral."
+    },
+    "descriptionLong": {
+      "tr": "Tek bir GPU'ya sığacak kadar küçük olan Mistral Nemo, büyük bağlam penceresiyle metin özetleme ve doküman incelemede üstündür.",
+      "en": "Small enough to fit on a single GPU, Mistral Nemo excels at text summarization and document review with its large context window."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["ücretsiz", "uzun bağlam", "açık kaynak"],
+      "en": ["free", "long context", "open source"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 128000,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-07",
+      "languages": ["en", "fr", "de", "es", "it"],
+      "modalities": ["text"],
+      "parameters": "12B",
+      "architecture": "Transformer",
+      "license": "Apache 2.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["PDF analizi", "Günlük kullanım", "Hızlı bot üretimi"],
+      "en": ["PDF analysis", "Daily usage", "Fast bot generation"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter", "Ollama"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "mistralai/mistral-nemo:free",
+    "featured": false,
+    "popularity": 83,
+    "turkishScore": 65
+  },
+  {
+    "id": "mistral/codestral",
+    "name": "Codestral",
+    "slug": "codestral",
+    "provider": "Mistral AI",
+    "providerSlug": "mistral",
+    "providerUrl": "https://mistral.ai/",
+    "providerColor": "#F7931E",
+    "description": {
+      "tr": "Mistral'in kod tamamlama ve üretme için özel eğittiği açık model.",
+      "en": "Mistral's open model specially trained for code completion and generation."
+    },
+    "descriptionLong": {
+      "tr": "Yazılım geliştiriciler için 80'den fazla programlama dilinde optimize edilmiştir. IDE'lerde otomatik tamamlama için hızlı ve etkilidir.",
+      "en": "Optimized for software developers across 80+ programming languages. Fast and effective for auto-completion in IDEs."
+    },
+    "category": "code",
+    "tags": {
+      "tr": ["kod", "açık model"],
+      "en": ["code", "open model"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 0.20,
+      "outputPer1M": 0.60,
+      "freeLimit": "Le Chat free usage"
+    },
+    "specs": {
+      "contextWindow": 32768,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-05",
+      "languages": ["en"],
+      "modalities": ["text"],
+      "parameters": "22B",
+      "architecture": "Transformer",
+      "license": "Mistral AI Non-Production"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Kod yazma asistanı", "Sözdizimi düzeltme", "Kod yorumlama"],
+      "en": ["Coding assistant", "Syntax fixing", "Code interpretation"]
+    },
+    "tools": {
+      "ides": ["VS Code", "JetBrains"],
+      "agents": ["Continue.dev"],
+      "platforms": ["Mistral API"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "mistralai/codestral-mamba",
+    "featured": false,
+    "popularity": 79,
+    "turkishScore": 55
+  },
+  {
+    "id": "openai/gpt-4o-mini",
+    "name": "GPT-4o Mini",
+    "slug": "gpt-4o-mini",
+    "provider": "OpenAI",
+    "providerSlug": "openai",
+    "providerUrl": "https://openai.com/",
+    "providerColor": "#10A37F",
+    "description": {
+      "tr": "Hızlı, maliyet etkin ve günlük görevler için mükemmel küçük OpenAI modeli.",
+      "en": "Fast, cost-effective, and perfect small OpenAI model for daily tasks."
+    },
+    "descriptionLong": {
+      "tr": "Önceki nesil GPT-3.5'in yerini alan bu model, görsel anlayabilme yeteneğiyle çok daha akıllı, hızlı ve ucuzdur.",
+      "en": "Replacing the previous generation GPT-3.5, this model is much smarter, faster, and cheaper with vision capabilities."
+    },
+    "category": "multimodal",
+    "tags": {
+      "tr": ["hızlı", "uygun fiyatlı", "görsel"],
+      "en": ["fast", "affordable", "vision"]
+    },
+    "pricing": {
+      "type": "freemium",
+      "inputPer1M": 0.15,
+      "outputPer1M": 0.60,
+      "freeLimit": "Free via GitHub Models"
+    },
+    "specs": {
+      "contextWindow": 128000,
+      "maxOutput": 16384,
+      "trainingCutoff": "2023-10",
+      "languages": ["tr", "en", "de", "fr", "es"],
+      "modalities": ["text", "image"],
+      "parameters": "Unknown",
+      "architecture": "Transformer",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": true,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": true,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["Maliyet odaklı chatbotlar", "Hızlı API işlemleri", "Basit özetleme"],
+      "en": ["Cost-oriented chatbots", "Fast API processing", "Simple summarization"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["GitHub Models", "OpenAI API", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "openai/gpt-4o-mini",
+    "featured": true,
+    "popularity": 96,
+    "turkishScore": 90
+  },
+  {
+    "id": "openai/gpt-4o",
+    "name": "GPT-4o",
+    "slug": "gpt-4o",
+    "provider": "OpenAI",
+    "providerSlug": "openai",
+    "providerUrl": "https://openai.com/",
+    "providerColor": "#10A37F",
+    "description": {
+      "tr": "OpenAI'ın amiral gemisi, çok modlu, yüksek performanslı premium modeli.",
+      "en": "OpenAI's flagship multimodal, high-performance premium model."
+    },
+    "descriptionLong": {
+      "tr": "Hem metin, hem kod hem de görsel işlemede en üst sıralarda yer alan, yaratıcılığı ve anlayışı çok yüksek bir yapay zeka.",
+      "en": "Top tier in text, code, and vision processing, an AI with very high creativity and understanding."
+    },
+    "category": "multimodal",
+    "tags": {
+      "tr": ["premium", "multimodal", "çok yetenekli"],
+      "en": ["premium", "multimodal", "highly capable"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 5.0,
+      "outputPer1M": 15.0,
+      "freeLimit": "Limited free on ChatGPT"
+    },
+    "specs": {
+      "contextWindow": 128000,
+      "maxOutput": 4096,
+      "trainingCutoff": "2023-10",
+      "languages": ["tr", "en", "de", "fr", "es"],
+      "modalities": ["text", "image", "audio"],
+      "parameters": "Unknown",
+      "architecture": "Transformer",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": true,
+      "imageGeneration": true,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": true,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["Karmaşık kod yazımı", "Yaratıcı yazarlık", "İleri veri analizi"],
+      "en": ["Complex coding", "Creative writing", "Advanced data analysis"]
+    },
+    "tools": {
+      "ides": ["Cursor"],
+      "agents": ["Aider"],
+      "platforms": ["GitHub Models", "OpenAI API", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "openai/gpt-4o",
+    "featured": true,
+    "popularity": 99,
+    "turkishScore": 92
+  },
+  {
+    "id": "microsoft/phi-4",
+    "name": "Phi-4",
+    "slug": "phi-4",
+    "provider": "Microsoft",
+    "providerSlug": "microsoft",
+    "providerUrl": "https://azure.microsoft.com/",
+    "providerColor": "#00A4EF",
+    "description": {
+      "tr": "Microsoft'un akıl yürütme (reasoning) yetenekli yeni 14B açık modeli.",
+      "en": "Microsoft's new 14B open model with reasoning capabilities."
+    },
+    "descriptionLong": {
+      "tr": "Sentetik veri ile eğitilmiş, karmaşık mantık ve matematik sorularını çözebilen çok güçlü ama küçük bir model.",
+      "en": "Trained on synthetic data, a very powerful yet small model capable of solving complex logic and math questions."
+    },
+    "category": "reasoning",
+    "tags": {
+      "tr": ["akıl yürütme", "açık kaynak", "mantık"],
+      "en": ["reasoning", "open source", "logic"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free to download/host"
+    },
+    "specs": {
+      "contextWindow": 16384,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-11",
+      "languages": ["en"],
+      "modalities": ["text"],
+      "parameters": "14B",
+      "architecture": "Transformer",
+      "license": "MIT"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Yerel akıl yürütme", "Eğitim", "Matematik"],
+      "en": ["Local reasoning", "Education", "Math"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Ollama", "Azure AI"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "microsoft/phi-4",
+    "featured": false,
+    "popularity": 81,
+    "turkishScore": 60
+  },
+  {
+    "id": "microsoft/phi-3.5-mini",
+    "name": "Phi-3.5 Mini",
+    "slug": "phi-3-5-mini",
+    "provider": "Microsoft",
+    "providerSlug": "microsoft",
+    "providerUrl": "https://azure.microsoft.com/",
+    "providerColor": "#00A4EF",
+    "description": {
+      "tr": "Cep telefonlarında bile çalışabilen Microsoft SLM (Küçük Dil Modeli).",
+      "en": "Microsoft SLM (Small Language Model) that can even run on mobile phones."
+    },
+    "descriptionLong": {
+      "tr": "128K devasa bağlam penceresine sahip, çok az kaynak tüketen ve uç cihazlar için biçilmiş kaftan olan bir model.",
+      "en": "A model with a massive 128K context window that consumes very few resources, perfect for edge devices."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["mobil", "uç cihaz", "küçük"],
+      "en": ["mobile", "edge device", "small"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free to download/host"
+    },
+    "specs": {
+      "contextWindow": 128000,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-07",
+      "languages": ["en"],
+      "modalities": ["text"],
+      "parameters": "3.8B",
+      "architecture": "Transformer",
+      "license": "MIT"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Çevrimdışı uygulama içi yapay zeka", "Gömülü sistemler"],
+      "en": ["Offline in-app AI", "Embedded systems"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Ollama", "Azure AI"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "microsoft/phi-3.5-mini-128k-instruct",
+    "featured": false,
+    "popularity": 77,
+    "turkishScore": 55
+  },
+  {
+    "id": "anthropic/claude-3-5-sonnet",
+    "name": "Claude 3.5 Sonnet",
+    "slug": "claude-3-5-sonnet",
+    "provider": "Anthropic",
+    "providerSlug": "anthropic",
+    "providerUrl": "https://www.anthropic.com/",
+    "providerColor": "#D4A574",
+    "description": {
+      "tr": "Dünyanın en iyi kodlama ve arayüz oluşturma modeli.",
+      "en": "The world's best coding and UI generation model."
+    },
+    "descriptionLong": {
+      "tr": "Yazılımcıların ve tasarımcıların favorisi. İnsansı dili, bağlamı anlama yeteneği ve sıfırdan oyun/uygulama kodlama yeteneği rakipsizdir.",
+      "en": "Favorite among developers and designers. Its human-like language, context understanding, and ability to code games/apps from scratch is unrivaled."
+    },
+    "category": "code",
+    "tags": {
+      "tr": ["kod", "tasarım", "insansı"],
+      "en": ["code", "design", "human-like"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 3.0,
+      "outputPer1M": 15.0,
+      "freeLimit": "Limited free on Claude.ai"
+    },
+    "specs": {
+      "contextWindow": 200000,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-10",
+      "languages": ["tr", "en", "de", "fr", "es"],
+      "modalities": ["text", "image"],
+      "parameters": "Unknown",
+      "architecture": "Transformer",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": true,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["UI/UX geliştirme", "React/Next.js projeleri", "İnsansı metin yazarlığı"],
+      "en": ["UI/UX development", "React/Next.js projects", "Human-like copywriting"]
+    },
+    "tools": {
+      "ides": ["Cursor", "Cline"],
+      "agents": ["Claude Artifacts"],
+      "platforms": ["Anthropic API", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "anthropic/claude-3.5-sonnet",
+    "featured": true,
+    "popularity": 99,
+    "turkishScore": 88
+  },
+  {
+    "id": "anthropic/claude-3-5-haiku",
+    "name": "Claude 3.5 Haiku",
+    "slug": "claude-3-5-haiku",
+    "provider": "Anthropic",
+    "providerSlug": "anthropic",
+    "providerUrl": "https://www.anthropic.com/",
+    "providerColor": "#D4A574",
+    "description": {
+      "tr": "Claude ailesinin en hızlı ve en ekonomik üyesi.",
+      "en": "The fastest and most economical member of the Claude family."
+    },
+    "descriptionLong": {
+      "tr": "Haiku, özellikle büyük verileri sınıflandırma, tablo çıkarma ve hızlı API dönüşleri gereken işler için inanılmaz ucuz ve etkilidir.",
+      "en": "Haiku is incredibly cheap and effective especially for tasks requiring large data classification, table extraction, and fast API responses."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["hızlı", "ucuz", "veri analizi"],
+      "en": ["fast", "cheap", "data analysis"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 1.0,
+      "outputPer1M": 5.0,
+      "freeLimit": "None"
+    },
+    "specs": {
+      "contextWindow": 200000,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-07",
+      "languages": ["tr", "en", "de", "fr"],
+      "modalities": ["text"],
+      "parameters": "Unknown",
+      "architecture": "Transformer",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["Veri etiketleme", "Müşteri desteği", "Belge özetleme"],
+      "en": ["Data labeling", "Customer support", "Document summarization"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Anthropic API", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "anthropic/claude-3.5-haiku",
+    "featured": false,
+    "popularity": 87,
+    "turkishScore": 85
+  },
+  {
+    "id": "nvidia/nemotron-3-ultra",
+    "name": "Nemotron 3 Ultra",
+    "slug": "nemotron-3-ultra",
+    "provider": "NVIDIA",
+    "providerSlug": "nvidia",
+    "providerUrl": "https://www.nvidia.com/",
+    "providerColor": "#76B900",
+    "description": {
+      "tr": "Nvidia'nın OpenRouter'da ücretsiz sunduğu kaliteli, genel amaçlı model.",
+      "en": "High-quality, general purpose model offered for free on OpenRouter by Nvidia."
+    },
+    "descriptionLong": {
+      "tr": "Kurumsal standartlara uygun, güvenli (harmless) cevaplar vermesiyle bilinen Nvidia yapay zekası.",
+      "en": "Nvidia AI known for providing safe (harmless) answers that meet enterprise standards."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["kurumsal", "güvenli", "ücretsiz"],
+      "en": ["enterprise", "safe", "free"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-02",
+      "languages": ["en"],
+      "modalities": ["text"],
+      "parameters": "70B",
+      "architecture": "Transformer",
+      "license": "Nvidia Open Model License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": false,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Güvenli sohbet", "Kurumsal uyumluluk"],
+      "en": ["Safe chat", "Enterprise compliance"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter", "Nvidia NIM"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "nvidia/nemotron-4-340b-instruct:free",
+    "featured": false,
+    "popularity": 70,
+    "turkishScore": 60
+  },
+  {
+    "id": "cohere/command-r-plus",
+    "name": "Command R+",
+    "slug": "command-r-plus",
+    "provider": "Cohere",
+    "providerSlug": "cohere",
+    "providerUrl": "https://cohere.com/",
+    "providerColor": "#39594D",
+    "description": {
+      "tr": "Cohere'in RAG ve araç kullanımına özel, kurumsal odaklı modeli.",
+      "en": "Cohere's enterprise-focused model designed for RAG and tool use."
+    },
+    "descriptionLong": {
+      "tr": "Özellikle veri tabanlarında arama yapıp yanıt üretme (RAG) konusunda endüstri lideri. İşletmelerin kendi verileriyle harika çalışır.",
+      "en": "Industry leader specifically in search and retrieval (RAG) from databases. Works wonderfully with enterprise data."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["RAG", "araç kullanımı", "kurumsal"],
+      "en": ["RAG", "tool use", "enterprise"]
+    },
+    "pricing": {
+      "type": "paid",
+      "inputPer1M": 3.0,
+      "outputPer1M": 15.0,
+      "freeLimit": "Free trial API available"
+    },
+    "specs": {
+      "contextWindow": 128000,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-03",
+      "languages": ["tr", "en", "es", "fr", "de", "it", "pt", "ja", "ko", "ar"],
+      "modalities": ["text"],
+      "parameters": "104B",
+      "architecture": "Transformer",
+      "license": "CC BY-NC 4.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": true,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["RAG tabanlı botlar", "İş süreci otomasyonu", "Çok dilli müşteri hizmetleri"],
+      "en": ["RAG-based bots", "Business process automation", "Multilingual customer service"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Cohere API", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "cohere/command-r-plus",
+    "featured": false,
+    "popularity": 84,
+    "turkishScore": 85
+  },
+  {
+    "id": "poolside/laguna-s",
+    "name": "Poolside Laguna S 2.1",
+    "slug": "poolside-laguna-s",
+    "provider": "Poolside",
+    "providerSlug": "poolside",
+    "providerUrl": "https://poolside.ai/",
+    "providerColor": "#8B5CF6",
+    "description": {
+      "tr": "Ajanik yazılım geliştirme odaklı, yeni ve hızlı model.",
+      "en": "Agentic software development-focused, new and fast model."
+    },
+    "descriptionLong": {
+      "tr": "Geliştiricilerin kod yazımını otonom ajanlarla otomatikleştirmesi için eğitilmiş, OpenRouter üzerinde ücretsiz sunulan özel model.",
+      "en": "A specialized model trained for developers to automate coding with autonomous agents, offered for free on OpenRouter."
+    },
+    "category": "code",
+    "tags": {
+      "tr": ["kod", "ücretsiz", "ajan"],
+      "en": ["code", "free", "agent"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 65536,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-08",
+      "languages": ["en"],
+      "modalities": ["text"],
+      "parameters": "Unknown",
+      "architecture": "Transformer",
+      "license": "Proprietary"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Ajan tabanlı kodlama", "Otonom yazılım"],
+      "en": ["Agent-based coding", "Autonomous software"]
+    },
+    "tools": {
+      "ides": ["Cursor"],
+      "agents": ["Poolside Platform"],
+      "platforms": ["OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "poolside/laguna-s-2.1:free",
+    "featured": false,
+    "popularity": 65,
+    "turkishScore": 50
+  },
+  {
+    "id": "nexagi/nex-n2.5-pro",
+    "name": "NexAGI Nex N2.5 Pro",
+    "slug": "nex-n2-5-pro",
+    "provider": "NexAGI",
+    "providerSlug": "nexagi",
+    "providerUrl": "https://nexagi.com",
+    "providerColor": "#EC4899",
+    "description": {
+      "tr": "İleri düzey akıl yürütme becerilerine sahip, OpenRouter'daki güçlü ücretsiz model.",
+      "en": "Powerful free model on OpenRouter with advanced reasoning skills."
+    },
+    "descriptionLong": {
+      "tr": "Llama veya Qwen tabanlı ince ayarlı mimarisiyle genel amaçlı sohbet, kod ve içerik üretimi için idealdir.",
+      "en": "Ideal for general-purpose chat, code, and content generation with its Llama or Qwen-based fine-tuned architecture."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["ücretsiz", "genel amaçlı"],
+      "en": ["free", "general purpose"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on OpenRouter"
+    },
+    "specs": {
+      "contextWindow": 32768,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-06",
+      "languages": ["en", "tr"],
+      "modalities": ["text"],
+      "parameters": "72B",
+      "architecture": "Transformer",
+      "license": "Open Source Custom"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": false,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Günlük sohbet", "Hikaye yazma"],
+      "en": ["Daily chat", "Story writing"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "nexagi/nex-n2.5-pro:free",
+    "featured": false,
+    "popularity": 60,
+    "turkishScore": 70
+  },
+  {
+    "id": "01ai/yi-1-5-34b",
+    "name": "Yi 1.5 34B",
+    "slug": "yi-1-5-34b",
+    "provider": "01.AI",
+    "providerSlug": "01ai",
+    "providerUrl": "https://01.ai/",
+    "providerColor": "#14B8A6",
+    "description": {
+      "tr": "Çin menşeli, özellikle İngilizce ve Çince'de çok başarılı açık model.",
+      "en": "Chinese origin open model highly successful especially in English and Chinese."
+    },
+    "descriptionLong": {
+      "tr": "Yi serisi çok yüksek bağlam pencereleri ile popülerleşti. 34B boyutu donanım dostu ve yüksek performansa sahip.",
+      "en": "The Yi series gained popularity with massive context windows. The 34B size is hardware friendly and highly performant."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["açık kaynak", "uzun bağlam"],
+      "en": ["open source", "long context"]
+    },
+    "pricing": {
+      "type": "freemium",
+      "inputPer1M": 0.1,
+      "outputPer1M": 0.3,
+      "freeLimit": "Varies by host"
+    },
+    "specs": {
+      "contextWindow": 200000,
+      "maxOutput": 4096,
+      "trainingCutoff": "2024-03",
+      "languages": ["en", "zh", "tr"],
+      "modalities": ["text"],
+      "parameters": "34B",
+      "architecture": "Transformer",
+      "license": "Yi License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": false,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": false,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Büyük metin okuma", "Çeviri"],
+      "en": ["Reading large texts", "Translation"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter", "Hugging Face"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "01-ai/yi-1.5-34b-chat",
+    "featured": false,
+    "popularity": 72,
+    "turkishScore": 65
+  },
+  {
+    "id": "upstage/solar-10-7b",
+    "name": "Solar 10.7B",
+    "slug": "solar-10-7b",
+    "provider": "Upstage",
+    "providerSlug": "upstage",
+    "providerUrl": "https://www.upstage.ai/",
+    "providerColor": "#8B5CF6",
+    "description": {
+      "tr": "Depth-up scaling (DUS) yöntemiyle yaratılan yenilikçi 10B sınıfı model.",
+      "en": "Innovative 10B class model created using depth-up scaling (DUS) method."
+    },
+    "descriptionLong": {
+      "tr": "7B modellerin derinleştirilmesiyle elde edilen Solar, 10.7 milyar parametresiyle çok daha büyük modellere kafa tutar.",
+      "en": "Created by deepening 7B models, Solar rivals much larger models with its 10.7 billion parameters."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["hafif", "yenilikçi", "açık kaynak"],
+      "en": ["lightweight", "innovative", "open source"]
+    },
+    "pricing": {
+      "type": "freemium",
+      "inputPer1M": 0.2,
+      "outputPer1M": 0.2,
+      "freeLimit": "Available free on some hubs"
+    },
+    "specs": {
+      "contextWindow": 4096,
+      "maxOutput": 2048,
+      "trainingCutoff": "2023-11",
+      "languages": ["en", "ko"],
+      "modalities": ["text"],
+      "parameters": "10.7B",
+      "architecture": "Transformer",
+      "license": "Apache 2.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": false,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": false,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Yerel chatbot", "Hafif görevler"],
+      "en": ["Local chatbot", "Lightweight tasks"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["OpenRouter", "Ollama"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "upstage/solar-10.7b-instruct",
+    "featured": false,
+    "popularity": 70,
+    "turkishScore": 50
+  },
+  {
+    "id": "google/gemma-3-27b",
+    "name": "Gemma 3 27B",
+    "slug": "gemma-3-27b",
+    "provider": "Google",
+    "providerSlug": "google",
+    "providerUrl": "https://ai.google.dev/gemma",
+    "providerColor": "#4285F4",
+    "description": {
+      "tr": "Google'ın çok modlu açık ağırlıklı son nesil amiral gemisi.",
+      "en": "Google's next-generation multimodal open-weights flagship."
+    },
+    "descriptionLong": {
+      "tr": "Gemma 3, metin ve görseli birlikte anlayarak yerel cihazlarda üstün bir görüş-dil modeli (VLM) deneyimi sunar.",
+      "en": "Gemma 3 offers an excellent vision-language model (VLM) experience on local devices by understanding text and images together."
+    },
+    "category": "multimodal",
+    "tags": {
+      "tr": ["multimodal", "açık kaynak", "görsel"],
+      "en": ["multimodal", "open source", "vision"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Completely free"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2025-01",
+      "languages": ["tr", "en", "de", "fr"],
+      "modalities": ["text", "image"],
+      "parameters": "27B",
+      "architecture": "Transformer",
+      "license": "Gemma License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": true,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": false,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": true
+    },
+    "useCases": {
+      "tr": ["Yerel görsel analizi", "Multimodal asistanlar"],
+      "en": ["Local image analysis", "Multimodal assistants"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["LM Studio", "Kaggle", "OpenRouter"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "google/gemma-3-27b-it:free",
+    "featured": true,
+    "popularity": 89,
+    "turkishScore": 80
+  },
+  {
+    "id": "internlm/internlm-2-5-20b",
+    "name": "InternLM 2.5 20B",
+    "slug": "internlm-2-5-20b",
+    "provider": "Shanghai AI Lab",
+    "providerSlug": "shanghai-ai-lab",
+    "providerUrl": "https://internlm.org/",
+    "providerColor": "#F43F5E",
+    "description": {
+      "tr": "1M token bağlamı ve güçlü akıl yürütme becerisi olan açık model.",
+      "en": "Open model with 1M token context and strong reasoning skills."
+    },
+    "descriptionLong": {
+      "tr": "Özellikle araç kullanımı (tool calling) ve otonom görevlerde 20B sınıfının ötesinde bir performans sergiler.",
+      "en": "Performs beyond the 20B class, especially in tool calling and autonomous tasks."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["uzun bağlam", "araç kullanımı", "ajan"],
+      "en": ["long context", "tool use", "agent"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free to download"
+    },
+    "specs": {
+      "contextWindow": 1048576,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-05",
+      "languages": ["en", "zh"],
+      "modalities": ["text"],
+      "parameters": "20B",
+      "architecture": "Transformer",
+      "license": "Apache 2.0"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": true,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Ajan platformları", "Büyük belge arama", "Matematiksel mantık"],
+      "en": ["Agent platforms", "Large document search", "Mathematical logic"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Hugging Face", "OpenRouter"]
+    },
+    "openRouterFree": false,
+    "openRouterId": "internlm/internlm2.5-20b-chat",
+    "featured": false,
+    "popularity": 73,
+    "turkishScore": 55
+  },
+  {
+    "id": "meta/llama-3.1-70b",
+    "name": "Llama 3.1 70B Instruct",
+    "slug": "llama-3-1-70b-instruct",
+    "provider": "Meta",
+    "providerSlug": "meta",
+    "providerUrl": "https://llama.meta.com/",
+    "providerColor": "#0668E1",
+    "description": {
+      "tr": "Llama 3 serisinin 128K bağlamlı, sağlam ve çok kullanımlı sürümü.",
+      "en": "The solid, widely used version of the Llama 3 series with 128K context."
+    },
+    "descriptionLong": {
+      "tr": "Gelişmiş araç kullanımı, çok dilli yetenekler ve güvenilirliğiyle açık kaynak ekosisteminin temel direklerinden biridir.",
+      "en": "One of the pillars of the open source ecosystem with its advanced tool use, multilingual capabilities, and reliability."
+    },
+    "category": "text",
+    "tags": {
+      "tr": ["açık kaynak", "güvenilir", "uzun bağlam"],
+      "en": ["open source", "reliable", "long context"]
+    },
+    "pricing": {
+      "type": "free",
+      "inputPer1M": 0,
+      "outputPer1M": 0,
+      "freeLimit": "Free on many providers"
+    },
+    "specs": {
+      "contextWindow": 131072,
+      "maxOutput": 8192,
+      "trainingCutoff": "2024-03",
+      "languages": ["tr", "en", "es", "de", "fr"],
+      "modalities": ["text"],
+      "parameters": "70B",
+      "architecture": "Transformer",
+      "license": "Llama 3 License"
+    },
+    "capabilities": {
+      "chat": true,
+      "codeGeneration": true,
+      "imageUnderstanding": false,
+      "imageGeneration": false,
+      "functionCalling": true,
+      "streaming": true,
+      "jsonMode": true,
+      "reasoning": false,
+      "webSearch": false,
+      "fileUpload": false
+    },
+    "useCases": {
+      "tr": ["Genel amaçlı botlar", "İçerik üretimi", "Veri sınıflandırma"],
+      "en": ["General purpose bots", "Content generation", "Data classification"]
+    },
+    "tools": {
+      "ides": [],
+      "agents": [],
+      "platforms": ["Groq", "OpenRouter", "Ollama"]
+    },
+    "openRouterFree": true,
+    "openRouterId": "meta-llama/llama-3.1-70b-instruct:free",
+    "featured": false,
+    "popularity": 90,
+    "turkishScore": 82
+  }
+]
