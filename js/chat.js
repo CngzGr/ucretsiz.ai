@@ -185,12 +185,17 @@ const Chat = (() => {
           model: conv.modelId,
           messages: [systemMessage, ...chatMessages],
           stream: true,
+          stream_options: { include_usage: true },
           max_tokens: 4096
         }),
         signal: abortController.signal
       });
 
       if (!response.ok) {
+        if (response.status === 429) {
+          onChunk("\n\n**Limit Aşıldı:** Ortak ücretsiz API anahtarının limiti dolmuş olabilir. Lütfen sağ üstteki Ayarlar (⚙️) menüsünden kendi OpenRouter anahtarınızı oluşturup girin.");
+          return;
+        }
         const errorData = await response.json().catch(() => ({}));
         throw new Error(errorData.error?.message || `HTTP ${response.status}`);
       }
@@ -214,7 +219,14 @@ const Chat = (() => {
           if (!trimmed.startsWith('data: ')) continue;
 
           try {
+            
             const data = JSON.parse(trimmed.slice(6));
+            
+            if (data.usage) {
+              const tokens = data.usage.total_tokens || 0;
+              updateAiTokenCost(tokens);
+            }
+            
             const delta = data.choices?.[0]?.delta?.content;
             if (delta) {
               aiMessage.content += delta;
@@ -254,6 +266,24 @@ const Chat = (() => {
   }
 
   /** Son AI mesajını güncelle (streaming sırasında) */
+
+  function updateAiTokenCost(tokens) {
+    const messages = document.querySelectorAll('.chat-bubble-ai');
+    const lastAi = messages[messages.length - 1];
+    if (lastAi) {
+      const meta = lastAi.querySelector('.bubble-meta');
+      if (meta) {
+        let costEl = meta.querySelector('.bubble-cost');
+        if (!costEl) {
+          costEl = document.createElement('span');
+          costEl.className = 'bubble-cost';
+          meta.appendChild(costEl);
+        }
+        costEl.textContent = `${tokens} Token (Ücretsiz)`;
+      }
+    }
+  }
+
   function updateLastAiMessage(content) {
     const messages = document.querySelectorAll('.chat-bubble-ai');
     const lastAi = messages[messages.length - 1];
@@ -346,10 +376,24 @@ const Chat = (() => {
   }
 
   /** Typing indicator */
+  const generativeTexts = ['Bağlanıyor...', 'Düşünüyor...', 'Anlamlandırıyor...', 'Dönüştürüyor...', 'Yazıyor...'];
+  let statusInterval = null;
+
   function showTypingIndicator(show) {
-    const indicator = document.getElementById('chat-typing');
-    if (indicator) {
-      indicator.style.display = show ? 'flex' : 'none';
+    const statusInd = document.querySelector('.ai-status-indicator');
+    const statusText = document.querySelector('.ai-status-text');
+    
+    if (show) {
+      if (statusInd) statusInd.style.display = 'flex';
+      let step = 0;
+      if (statusText) statusText.textContent = generativeTexts[step];
+      statusInterval = setInterval(() => {
+        step = (step + 1) % generativeTexts.length;
+        if (statusText) statusText.textContent = generativeTexts[step];
+      }, 1500);
+    } else {
+      if (statusInd) statusInd.style.display = 'none';
+      if (statusInterval) clearInterval(statusInterval);
     }
   }
 
@@ -386,22 +430,27 @@ const Chat = (() => {
     const select = document.getElementById('chat-model-select');
     if (!select) return;
 
-    // models.json'dan ücretsiz modelleri yükle
-    fetch('/data/models.json')
+    fetch('https://openrouter.ai/api/v1/models')
       .then(r => r.json())
-      .then(models => {
-        const freeModels = models.filter(m => m.openRouterFree && m.openRouterId);
-        if (freeModels.length > 0) {
-          availableModels = freeModels.map(m => ({
-            id: m.openRouterId,
+      .then(data => {
+        const models = data.data;
+        const validModels = models.filter(m => m.pricing && parseFloat(m.pricing.prompt) === 0 && parseFloat(m.pricing.completion) === 0);
+        if (validModels.length > 0) {
+          availableModels = validModels.map(m => ({
+            id: m.id,
             name: m.name,
-            provider: m.provider
+            provider: m.id.split('/')[0],
+            isFree: true
           }));
         }
-        renderModelOptions(select);
+                renderModelOptions(select);
+        if (availableModels.length > 0 && !select.value) {
+            select.value = availableModels[0].id;
+        }
+        
       })
-      .catch(() => {
-        // JSON yüklenemezse varsayılanları kullan
+      .catch((e) => {
+        console.error('Modeller yüklenemedi:', e);
         renderModelOptions(select);
       });
   }
@@ -437,7 +486,6 @@ const Chat = (() => {
       textarea.style.height = Math.min(textarea.scrollHeight, 200) + 'px';
     });
 
-    // Enter ile gönder (Shift+Enter yeni satır)
     textarea.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
@@ -481,17 +529,27 @@ const Chat = (() => {
   }
 
   /** Sidebar toggle (mobil) */
+  
+  
   function initSidebarToggle() {
-    const toggle = document.getElementById('chat-sidebar-toggle');
+    const toggle = document.getElementById('history-toggle-btn');
+    const closeBtn = document.getElementById('chat-sidebar-close');
     const sidebar = document.querySelector('.chat-sidebar');
+    const overlay = document.getElementById('chat-overlay');
     if (toggle && sidebar) {
       toggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+        sidebar.classList.toggle('show');
+        if (overlay) overlay.classList.toggle('show');
       });
     }
+    const closeSidebar = () => {
+        sidebar.classList.remove('show');
+        if(overlay) overlay.classList.remove('show');
+    };
+    if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+    if (overlay && sidebar) overlay.addEventListener('click', closeSidebar);
   }
-
-  /** Başlangıç */
+/** Başlangıç */
   function init() {
     loadHistory();
     populateModelSelect();

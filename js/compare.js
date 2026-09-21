@@ -15,7 +15,7 @@ const Compare = (() => {
     selectB: document.getElementById('compare-model-b'),
     messagesA: document.getElementById('compare-messages-a'),
     messagesB: document.getElementById('compare-messages-b'),
-    input: document.getElementById('compare-input'),
+    input: document.querySelector('.compare-input-area textarea'),
     sendBtn: document.getElementById('compare-send-btn'),
     stopBtn: document.getElementById('compare-stop-btn')
   };
@@ -29,32 +29,35 @@ const Compare = (() => {
   }
 
   /** Modelleri yükle ve select'leri doldur */
-  async function loadModels() {
+    async function loadModels() {
     try {
-      const response = await fetch('/data/models.json');
-      const allModels = await response.json();
-      // Sadece OpenRouter'da ücretsiz olanları filtrele
-      freeModels = allModels.filter(m => m.openRouterFree && m.openRouterId);
-      
-      const optionsHTML = freeModels.map(m => 
-        `<option value="${m.openRouterId}">${m.name} (${m.provider})</option>`
-      ).join('');
+      const response = await fetch('https://openrouter.ai/api/v1/models');
+      const data = await response.json();
+      const allModels = data.data;
 
-      els.selectA.innerHTML += optionsHTML;
-      els.selectB.innerHTML += optionsHTML;
-
-      // Default seçimler
-      if (freeModels.length > 0) els.selectA.value = freeModels[0].openRouterId;
-      if (freeModels.length > 1) els.selectB.value = freeModels[1].openRouterId;
-      else if (freeModels.length > 0) els.selectB.value = freeModels[0].openRouterId;
+      // Tüm OpenRouter ücretsiz modellerini filtrele
+      freeModels = allModels.filter(m => m.pricing && parseFloat(m.pricing.prompt) === 0 && parseFloat(m.pricing.completion) === 0);
       
-    } catch (e) {
-      console.error('Modeller yüklenemedi:', e);
-      App.showToast(I18n.t('general.error') || 'Modeller yüklenemedi', 'error');
+      const optionsHTML = freeModels.map(m => `
+<option value="${m.id}" data-free="true">${m.name} (${m.id.split('/')[0]}) (Ücretsiz)</option>`).join('');
+
+      els.selectA.innerHTML = '<option value="" disabled>Model Seçin</option>' + optionsHTML;
+      els.selectB.innerHTML = '<option value="" disabled>Model Seçin</option>' + optionsHTML;
+
+      if (freeModels.length > 0) els.selectA.value = freeModels[0].id;
+      if (freeModels.length > 1) els.selectB.value = freeModels[1].id;
+      else if (freeModels.length > 0) els.selectB.value = freeModels[0].id;
+      
+      els.selectA.dispatchEvent(new Event('change'));
+      els.selectB.dispatchEvent(new Event('change'));
+      
+      if(typeof checkFormState === 'function') checkFormState();
+    } catch (error) {
+      console.error('Modeller yüklenirken hata oluştu:', error);
     }
   }
 
-  /** Olay dinleyicilerini ayarla */
+  /** Olay Dinleyicileri */
   function setupEventListeners() {
     // Textarea otomatik boyutlandırma
     els.input.addEventListener('input', function() {
@@ -69,6 +72,9 @@ const Compare = (() => {
       }
     });
 
+    els.selectA.addEventListener('change', checkFormState);
+    els.selectB.addEventListener('change', checkFormState);
+
     // Enter ile gönderme
     els.input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && !e.shiftKey) {
@@ -81,7 +87,53 @@ const Compare = (() => {
     els.stopBtn.addEventListener('click', stopGeneration);
   }
 
+  function checkFormState() {
+    const optA = els.selectA.options[els.selectA.selectedIndex];
+    const optB = els.selectB.options[els.selectB.selectedIndex];
+    
+    const isPaidA = optA && optA.getAttribute('data-free') === 'false';
+    const isPaidB = optB && optB.getAttribute('data-free') === 'false';
+    
+    if (isPaidA || isPaidB) {
+      els.input.disabled = true;
+      els.input.placeholder = "Seçilen modellerden biri ücretlidir, şimdilik kullanılamaz.";
+      els.sendBtn.disabled = true;
+      els.sendBtn.style.opacity = '0.5';
+      els.sendBtn.style.pointerEvents = 'none';
+    } else {
+      els.input.disabled = false;
+      els.input.placeholder = "Her iki modele de gönderilecek mesajınızı yazın...";
+      if (els.input.value.trim() !== '') {
+        els.sendBtn.disabled = false;
+        els.sendBtn.style.opacity = '1';
+        els.sendBtn.style.pointerEvents = 'auto';
+      }
+    }
+  }
+
   /** Ortak mesajı gönder */
+
+  const generativeTexts = ['Bağlanıyor...', 'Düşünüyor...', 'Anlamlandırıyor...', 'Dönüştürüyor...', 'Yazıyor...'];
+  let statusInterval = null;
+
+  function showTypingIndicator(show) {
+    const statusInd = document.querySelector('.compare-input-area .ai-status-indicator');
+    const statusText = document.querySelector('.compare-input-area .ai-status-text');
+    
+    if (show) {
+      if (statusInd) statusInd.style.display = 'flex';
+      let step = 0;
+      if (statusText) statusText.textContent = generativeTexts[step];
+      statusInterval = setInterval(() => {
+        step = (step + 1) % generativeTexts.length;
+        if (statusText) statusText.textContent = generativeTexts[step];
+      }, 1500);
+    } else {
+      if (statusInd) statusInd.style.display = 'none';
+      if (statusInterval) clearInterval(statusInterval);
+    }
+  }
+
   async function sendMessage() {
     if (isGenerating) return;
     
@@ -122,6 +174,7 @@ const Compare = (() => {
     isGenerating = true;
     els.sendBtn.style.display = 'none';
     els.stopBtn.style.display = 'flex';
+    showTypingIndicator(true);
     els.selectA.disabled = true;
     els.selectB.disabled = true;
 
@@ -129,8 +182,8 @@ const Compare = (() => {
     const bubbleA = createAiBubble(els.messagesA);
     const bubbleB = createAiBubble(els.messagesB);
     
-    const contentA = bubbleA.querySelector('.chat-bubble-content');
-    const contentB = bubbleB.querySelector('.chat-bubble-content');
+    const contentA = bubbleA.querySelector('.bubble-content');
+    const contentB = bubbleB.querySelector('.bubble-content');
 
     // İstekleri paralel olarak başlat
     abortControllerA = new AbortController();
@@ -139,17 +192,43 @@ const Compare = (() => {
     let textA = "";
     let textB = "";
 
-    const reqA = streamRequest(modelA, apiKey, abortControllerA, (chunk) => {
-      textA += chunk;
-      contentA.innerHTML = App.parseMarkdown ? App.parseMarkdown(textA) : App.escapeHtml(textA);
-      scrollToBottom(els.messagesA);
-    });
+          const reqA = streamRequest(modelA, apiKey, abortControllerA, (chunk) => {
+        if (chunk.startsWith('__TOKEN_USAGE__:')) {
+          const tokens = chunk.split(':')[1];
+          let costEl = bubbleA.querySelector('.bubble-cost');
+          if (!costEl) {
+             const meta = document.createElement('div');
+             meta.className = 'bubble-meta';
+             meta.innerHTML = `<span class="bubble-cost">${tokens} Token (Ücretsiz)</span>`;
+             bubbleA.querySelector('.bubble-body').appendChild(meta);
+          } else {
+             costEl.textContent = `${tokens} Token (Ücretsiz)`;
+          }
+          return;
+        }
+        textA += chunk;
+        contentA.innerHTML = App.simpleMarkdown(textA);
+        scrollToBottom(els.messagesA);
+      });
 
-    const reqB = streamRequest(modelB, apiKey, abortControllerB, (chunk) => {
-      textB += chunk;
-      contentB.innerHTML = App.parseMarkdown ? App.parseMarkdown(textB) : App.escapeHtml(textB);
-      scrollToBottom(els.messagesB);
-    });
+          const reqB = streamRequest(modelB, apiKey, abortControllerB, (chunk) => {
+        if (chunk.startsWith('__TOKEN_USAGE__:')) {
+          const tokens = chunk.split(':')[1];
+          let costEl = bubbleB.querySelector('.bubble-cost');
+          if (!costEl) {
+             const meta = document.createElement('div');
+             meta.className = 'bubble-meta';
+             meta.innerHTML = `<span class="bubble-cost">${tokens} Token (Ücretsiz)</span>`;
+             bubbleB.querySelector('.bubble-body').appendChild(meta);
+          } else {
+             costEl.textContent = `${tokens} Token (Ücretsiz)`;
+          }
+          return;
+        }
+        textB += chunk;
+        contentB.innerHTML = App.simpleMarkdown(textB);
+        scrollToBottom(els.messagesB);
+      });
 
     try {
       await Promise.allSettled([reqA, reqB]);
@@ -162,6 +241,7 @@ const Compare = (() => {
       console.error('Karşılaştırma hatası:', err);
     } finally {
       isGenerating = false;
+      showTypingIndicator(false);
       els.sendBtn.style.display = 'flex';
       els.stopBtn.style.display = 'none';
       els.selectA.disabled = false;
@@ -240,12 +320,17 @@ const Compare = (() => {
           model: modelId,
           messages: conversationHistory, // Tüm user mesajları dahil ediliyor
           stream: true,
+          stream_options: { include_usage: true },
           max_tokens: 4096
         }),
         signal: controller.signal
       });
 
       if (!response.ok) {
+        if (response.status === 429) {
+          onChunk("\n\n**Limit Aşıldı:** Ortak ücretsiz API anahtarının limiti dolmuş olabilir. Lütfen sağ üstteki Ayarlar (⚙️) menüsünden kendi OpenRouter anahtarınızı oluşturup girin.");
+          return;
+        }
         const error = await response.json();
         onChunk(`\n\n**Hata:** ${error.error?.message || 'Bilinmeyen bir hata oluştu.'}`);
         return;

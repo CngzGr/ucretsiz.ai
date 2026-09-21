@@ -15,10 +15,11 @@ const I18n = (() => {
     'nav.models': { tr: 'AI Modeller', en: 'AI Models' },
     'nav.chat': { tr: 'Chat', en: 'Chat' },
     'nav.about': { tr: 'Hakkımızda', en: 'About' },
+    'nav.compare': { tr: 'Karşılaştır', en: 'Compare' },
 
     // Hero
     'hero.title': { tr: "Türkiye'nin Ücretsiz AI Platformu", en: "Turkey's Free AI Platform" },
-    'hero.subtitle': { 
+    'hero.subtitle': {
       tr: 'Ücretsiz yapay zeka modellerini keşfedin, karşılaştırın ve hemen deneyin. OpenRouter üzerinden ücretsiz AI modelleriyle sohbet edin.',
       en: 'Discover, compare and try free AI models instantly. Chat with free AI models via OpenRouter.'
     },
@@ -36,7 +37,7 @@ const I18n = (() => {
     'chat.history': { tr: 'Sohbet Geçmişi', en: 'Chat History' },
     'chat.new': { tr: 'Yeni Sohbet', en: 'New Chat' },
     'chat.empty.title': { tr: 'AI ile sohbete başlayın', en: 'Start a conversation with AI' },
-    'chat.empty.subtitle': { 
+    'chat.empty.subtitle': {
       tr: 'Ücretsiz AI modellerinden birini seçin ve hemen sormaya başlayın.',
       en: 'Choose a free AI model and start asking right away.'
     },
@@ -44,7 +45,7 @@ const I18n = (() => {
     'chat.suggestion.2': { tr: "Türkiye'nin en güzel 10 yeri nedir?", en: 'What are the 10 most beautiful places in Turkey?' },
     'chat.suggestion.3': { tr: 'React vs Vue karşılaştırması yap', en: 'Compare React vs Vue' },
     'chat.suggestion.4': { tr: 'Yapay zeka nedir? Basitçe anlat.', en: 'What is AI? Explain simply.' },
-    'chat.error.nokey': { 
+    'chat.error.nokey': {
       tr: 'Lütfen Ayarlar\'dan OpenRouter API anahtarınızı girin.',
       en: 'Please enter your OpenRouter API key in Settings.'
     },
@@ -54,7 +55,7 @@ const I18n = (() => {
 
     // Modeller sayfası
     'models.title': { tr: 'AI Modelleri Keşfet', en: 'Discover AI Models' },
-    'models.subtitle': { 
+    'models.subtitle': {
       tr: 'Piyasadaki en güncel ücretsiz ve ücretli yapay zeka modellerini keşfedin.',
       en: 'Discover the most up-to-date free and paid AI models on the market.'
     },
@@ -110,7 +111,7 @@ const I18n = (() => {
     'settings.title': { tr: 'Ayarlar', en: 'Settings' },
     'settings.apikey': { tr: 'OpenRouter API Anahtarı', en: 'OpenRouter API Key' },
     'settings.apikey.placeholder': { tr: 'sk-or-v1-xxxx...', en: 'sk-or-v1-xxxx...' },
-    'settings.apikey.help': { 
+    'settings.apikey.help': {
       tr: 'openrouter.ai adresinden ücretsiz API anahtarı alabilirsiniz.',
       en: 'Get a free API key from openrouter.ai.'
     },
@@ -120,7 +121,7 @@ const I18n = (() => {
     'settings.language': { tr: 'Dil', en: 'Language' },
 
     // Footer
-    'footer.description': { 
+    'footer.description': {
       tr: 'Türkiye\'nin ücretsiz yapay zeka platformu. Ücretsiz AI modellerini keşfedin ve deneyin.',
       en: 'Turkey\'s free AI platform. Discover and try free AI models.'
     },
@@ -135,7 +136,7 @@ const I18n = (() => {
     // Hakkımızda
     'about.title': { tr: 'Hakkımızda', en: 'About Us' },
     'about.mission.title': { tr: 'Misyonumuz', en: 'Our Mission' },
-    'about.mission.text': { 
+    'about.mission.text': {
       tr: 'Yapay zeka teknolojilerine erişimi demokratikleştirmek ve Türkiye\'deki geliştiricilere, öğrencilere ve meraklılara ücretsiz AI araçlarını keşfetme imkanı sunmak.',
       en: 'Democratize access to AI technologies and provide developers, students and enthusiasts in Turkey the opportunity to discover free AI tools.'
     },
