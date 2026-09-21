@@ -195,14 +195,18 @@ const Compare = (() => {
           const reqA = streamRequest(modelA, apiKey, abortControllerA, (chunk) => {
         if (chunk.startsWith('__TOKEN_USAGE__:')) {
           const tokens = chunk.split(':')[1];
-          let costEl = bubbleA.querySelector('.bubble-cost');
+          let costEl = bubbleB.querySelector('.bubble-cost');
+          const modelObj = freeModels.find(m => m.id === modelB);
+          const modelName = modelObj ? modelObj.name : modelB;
+          const infoText = `Model: ${modelName} | Token: ${tokens} (Ücretsiz)`;
+          
           if (!costEl) {
              const meta = document.createElement('div');
              meta.className = 'bubble-meta';
-             meta.innerHTML = `<span class="bubble-cost">${tokens} Token (Ücretsiz)</span>`;
-             bubbleA.querySelector('.bubble-body').appendChild(meta);
+             meta.innerHTML = `<span class="bubble-cost" style="display: block; margin-top: 5px;">${infoText}</span>`;
+             bubbleB.querySelector('.bubble-body').appendChild(meta);
           } else {
-             costEl.textContent = `${tokens} Token (Ücretsiz)`;
+             costEl.textContent = infoText;
           }
           return;
         }
@@ -263,18 +267,20 @@ const Compare = (() => {
   /** Basit baloncuk ekleyici */
   function appendMessage(container, role, text) {
     const wrapper = document.createElement('div');
-    wrapper.className = `chat-bubble-wrapper ${role}`;
     
     const isUser = role === 'user';
+    wrapper.className = `chat-bubble ${isUser ? 'chat-bubble-user' : 'chat-bubble-ai'}`;
+    
     const avatar = isUser 
-      ? `<div class="chat-avatar">Sen</div>`
-      : `<div class="chat-avatar ai-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 12"/><path d="M12 12 19 4.9"/><path d="M12 12 4.9 19"/></svg></div>`;
+      ? `<div class="bubble-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5z"/></svg></div>`
+      : `<div class="bubble-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 110 2h-1.17A7 7 0 0113 22h-2a7 7 0 01-6.83-6H3a1 1 0 110-2h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg></div>`;
       
+    const contentSafe = isUser ? App.escapeHtml(text) : (App.parseMarkdown ? App.parseMarkdown(text) : App.escapeHtml(text));
     wrapper.innerHTML = `
       ${avatar}
-      <div class="chat-bubble ${isUser ? 'chat-bubble-user' : 'chat-bubble-ai'}">
-        <div class="chat-bubble-content">
-          ${isUser ? App.escapeHtml(text) : (App.parseMarkdown ? App.parseMarkdown(text) : App.escapeHtml(text))}
+      <div class="bubble-body">
+        <div class="bubble-content">
+          ${contentSafe}
         </div>
       </div>
     `;
@@ -286,11 +292,11 @@ const Compare = (() => {
   /** AI baloncuğu oluştur ve referansını dön */
   function createAiBubble(container) {
     const wrapper = document.createElement('div');
-    wrapper.className = 'chat-bubble-wrapper ai';
+    wrapper.className = 'chat-bubble chat-bubble-ai';
     wrapper.innerHTML = `
-      <div class="chat-avatar ai-avatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
-      <div class="chat-bubble chat-bubble-ai">
-        <div class="chat-bubble-content">
+      <div class="bubble-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 110 2h-1.17A7 7 0 0113 22h-2a7 7 0 01-6.83-6H3a1 1 0 110-2h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg></div>
+      <div class="bubble-body">
+        <div class="bubble-content">
           <div class="typing-dots" style="padding: 0.5rem 0;"><span></span><span></span><span></span></div>
         </div>
       </div>
