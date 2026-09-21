@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelleri Karşılaştır | ücretsiz.ai</title>
+  <meta name="description" content="Farklı yapay zeka modellerini aynı prompt ile yan yana karşılaştırın.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N4ZVHS9RV4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N4ZVHS9RV4');
+  </script>
+</head>
+<body style="overflow: hidden;">
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <img src="/assets/logo.jpg" alt="ücretsiz.ai" width="32" height="32" class="nav-logo">
+        <span class="nav-brand-text">ücretsiz<span class="text-primary">.ai</span></span>
+      </a>
+      <nav class="nav-links" id="nav-links" role="navigation">
+        <a href="/" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="/models.html" data-i18n="nav.models">AI Modeller</a>
+        <a href="/karsilastir.html" class="active" data-i18n="nav.compare">Karşılaştır</a>
+        <a href="/hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="lang-toggle" class="btn btn-ghost btn-sm">EN</button>
+        <button id="theme-toggle" class="btn btn-ghost btn-icon" aria-label="Tema"></button>
+        <button id="settings-btn" class="btn btn-ghost btn-icon" aria-label="Ayarlar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </button>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="compare-layout">
+    <div class="compare-header">
+      <div class="container">
+        <h1 class="text-xl" style="margin-bottom: 0.25rem;" data-i18n="compare.title">Modelleri Karşılaştır</h1>
+        <p class="text-sm text-secondary" data-i18n="compare.subtitle">Aynı soruyu iki farklı ücretsiz modele sorun ve yanıtları yan yana karşılaştırın.</p>
+      </div>
+    </div>
+    
+    <div class="compare-grid">
+      <!-- Sütun A -->
+      <div class="compare-column">
+        <div class="compare-col-header">
+          <span class="badge badge-primary">Model A</span>
+          <select id="compare-model-a" class="select" style="flex: 1;">
+            <option value="" disabled selected data-i18n="compare.select">Model Seçin</option>
+          </select>
+        </div>
+        <div id="compare-messages-a" class="compare-messages">
+          <div class="chat-empty">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-muted" style="margin-bottom:1rem;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <p class="text-secondary text-sm">Model A'nın yanıtları burada görünecek.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sütun B -->
+      <div class="compare-column">
+        <div class="compare-col-header">
+          <span class="badge badge-secondary" style="background:var(--secondary);color:white;border:none;">Model B</span>
+          <select id="compare-model-b" class="select" style="flex: 1;">
+            <option value="" disabled selected data-i18n="compare.select">Model Seçin</option>
+          </select>
+        </div>
+        <div id="compare-messages-b" class="compare-messages">
+          <div class="chat-empty">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-muted" style="margin-bottom:1rem;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <p class="text-secondary text-sm">Model B'nin yanıtları burada görünecek.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ortak Girdi Alanı -->
+    <div class="compare-input-area">
+      <div class="compare-input-wrapper">
+        <textarea id="compare-input" class="input" rows="1" placeholder="Her iki modele de gönderilecek mesajınızı yazın..." data-i18n="compare.placeholder" data-i18n-target="placeholder"></textarea>
+        <button id="compare-send-btn" class="compare-send-btn btn btn-primary btn-icon" aria-label="Gönder">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <button id="compare-stop-btn" class="compare-send-btn btn btn-danger btn-icon" aria-label="Durdur" style="display: none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Settings Modal (Shared) -->
+  <div id="settings-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 data-i18n="settings.title">Ayarlar</h3>
+        <button class="modal-close btn btn-ghost btn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-group">
+          <label for="api-key-input" class="settings-label">OpenRouter API Anahtarı</label>
+          <input type="password" id="api-key-input" class="input" placeholder="sk-or-v1-xxxx...">
+          <p class="text-sm text-muted" style="margin-top:.5rem;"><a href="https://openrouter.ai/keys" target="_blank" rel="noopener" class="text-primary">openrouter.ai/keys →</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="settings-save btn btn-primary">Kaydet</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toast-container" aria-live="polite"></div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/compare.js"></script>
+</body>
+</html>
