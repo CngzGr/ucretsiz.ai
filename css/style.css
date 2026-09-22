@@ -6,17 +6,17 @@
 
 :root {
   /* Colors - Dark Theme (Default) */
-  --bg-color: #0a0a0f;
-  --surface-color: #111118;
-  --card-color: #1a1a25;
-  --border-color: #2a2a3a;
-  --hover-color: #252535;
-  
+  --bg-color: #0b0c0e;
+  --surface-color: #131417;
+  --card-color: #1b1d21;
+  --border-color: #2b2d32;
+  --hover-color: #24262b;
+
   /* Brand Colors */
-  --primary: #6366f1;
-  --primary-hover: #818cf8;
-  --primary-glow: rgba(99, 102, 241, 0.15);
-  --secondary: #8b5cf6;
+  --primary: #f5b93d;
+  --primary-hover: #ffd166;
+  --primary-glow: rgba(245, 185, 61, 0.15);
+  --secondary: #22d3c8;
   
   /* Status Colors */
   --success: #22c55e;
@@ -33,7 +33,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 15px rgba(99, 102, 241, 0.3);
+  --shadow-glow: 0 0 15px rgba(245, 185, 61, 0.3);
   
   /* Typography */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -91,7 +91,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 15px rgba(99, 102, 241, 0.2);
+  --shadow-glow: 0 0 15px rgba(245, 185, 61, 0.2);
 }
 
 /* ==========================================================================
@@ -376,7 +376,7 @@ h6 { font-size: 1rem; }
   height: 72px;
   display: flex;
   align-items: center;
-  background-color: rgba(10, 10, 15, 0.8);
+  background-color: rgba(11, 12, 14, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
@@ -471,7 +471,8 @@ h6 { font-size: 1rem; }
   margin-top: 72px;
 }
 
-.hero-background {
+.hero-background,
+.hero-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -479,18 +480,26 @@ h6 { font-size: 1rem; }
   height: 100%;
   overflow: hidden;
   z-index: var(--z-negative);
-  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  background:
+    linear-gradient(rgba(245, 185, 61, 0.05) 1px, transparent 1px) 0 0 / 42px 42px,
+    linear-gradient(90deg, rgba(245, 185, 61, 0.05) 1px, transparent 1px) 0 0 / 42px 42px,
+    radial-gradient(circle at 30% 20%, rgba(245, 185, 61, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 75% 65%, rgba(34, 211, 200, 0.08) 0%, transparent 55%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }
 
-.hero-blob {
+.hero-blob,
+.hero-orb {
   position: absolute;
   filter: blur(80px);
-  opacity: 0.4;
+  opacity: 0.35;
   border-radius: 50%;
   animation: blob 7s infinite alternate;
 }
 
-.blob-1 {
+.blob-1,
+.hero-orb-1 {
   top: 10%;
   left: 20%;
   width: 300px;
@@ -499,13 +508,24 @@ h6 { font-size: 1rem; }
   animation-delay: 0s;
 }
 
-.blob-2 {
+.blob-2,
+.hero-orb-2 {
   bottom: 20%;
   right: 15%;
   width: 400px;
   height: 400px;
   background-color: var(--secondary);
   animation-delay: 2s;
+}
+
+.hero-orb-3 {
+  top: 45%;
+  left: 55%;
+  width: 220px;
+  height: 220px;
+  background-color: var(--primary);
+  opacity: 0.2;
+  animation-delay: 4s;
 }
 
 .hero-content {
@@ -594,9 +614,9 @@ h6 { font-size: 1rem; }
 /* Variants */
 .btn-primary {
   background-color: var(--primary);
-  color: #ffffff;
+  color: #171310;
   padding: 0.75rem 1.5rem;
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 10px rgba(245, 185, 61, 0.3);
 }
 
 .btn-primary:hover {
@@ -693,9 +713,9 @@ h6 { font-size: 1rem; }
 }
 
 .badge-popular {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+  background: linear-gradient(135deg, rgba(245, 185, 61, 0.2), rgba(34, 211, 200, 0.2));
   color: var(--secondary);
-  border: 1px solid rgba(139, 92, 246, 0.4);
+  border: 1px solid rgba(34, 211, 200, 0.4);
 }
 
 .badge-category {
@@ -1241,7 +1261,7 @@ h6 { font-size: 1rem; }
 .model-detail-hero {
   padding: var(--spacing-12) 0 var(--spacing-8);
   border-bottom: 1px solid var(--border-color);
-  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.05), transparent);
+  background: linear-gradient(to bottom, rgba(245, 185, 61, 0.05), transparent);
 }
 
 .model-header-main {
@@ -1754,7 +1774,7 @@ input:checked + .slider:before {
   width: 48px;
   height: 48px;
   margin: 0 auto var(--spacing-4);
-  background-color: rgba(99, 102, 241, 0.1);
+  background-color: rgba(245, 185, 61, 0.1);
   color: var(--primary);
   border-radius: var(--radius-md);
   display: flex;
@@ -2365,6 +2385,8 @@ input:checked + .slider:before {
   margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
+  border-bottom: solid 1px #eee;
+  padding-bottom: 0.5rem;
 }
 
 .section-header h2 {
@@ -3163,13 +3185,13 @@ details[open] summary {
 .chat-bubble-ai {
   align-self: flex-end;
   flex-direction: row-reverse;
-  background-color: rgba(99, 102, 241, 0.08); /* subtle primary */
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background-color: rgba(34, 211, 200, 0.08); /* subtle secondary/teal */
+  border: 1px solid rgba(34, 211, 200, 0.2);
   border-bottom-right-radius: 4px;
 }
 
 .chat-bubble-ai .bubble-avatar {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .chat-bubble-ai .bubble-body {
@@ -3237,4 +3259,219 @@ details[open] summary {
   border-radius: 4px;
   margin-left: 0.5rem;
   border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   16. Roadmap / "Yakında" (SaaS-gateway teaser + vizyon.html timeline)
+   ========================================================================== */
+
+.badge-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-pill);
+  background: rgba(34, 211, 200, 0.12);
+  color: var(--secondary);
+  border: 1px solid rgba(34, 211, 200, 0.3);
+  font-family: var(--font-mono);
+}
+
+.badge-soon::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--secondary);
+  box-shadow: 0 0 8px var(--secondary);
+  animation: pulse-status 2s infinite ease-in-out;
+}
+
+.roadmap-teaser {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background:
+    linear-gradient(rgba(34, 211, 200, 0.04) 1px, transparent 1px) 0 0 / 100% 42px,
+    var(--surface-color);
+}
+
+.roadmap-teaser-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-12);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .roadmap-teaser-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roadmap-teaser h2 {
+  font-size: 2rem;
+  margin: var(--spacing-4) 0 var(--spacing-3);
+}
+
+.roadmap-teaser p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-6);
+}
+
+/* Compact 3-stage strip used inside the homepage teaser */
+.roadmap-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.roadmap-strip-step {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-4);
+  padding-bottom: var(--spacing-6);
+  padding-left: var(--spacing-2);
+}
+
+.roadmap-strip-step:last-child {
+  padding-bottom: 0;
+}
+
+.roadmap-strip-step::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 34px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.roadmap-strip-step:last-child::before {
+  display: none;
+}
+
+.roadmap-strip-dot {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  z-index: 1;
+}
+
+.roadmap-strip-step.is-active .roadmap-strip-dot {
+  background: var(--primary-glow);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.roadmap-strip-step.is-next .roadmap-strip-dot {
+  background: rgba(34, 211, 200, 0.12);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.roadmap-strip-title {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.roadmap-strip-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Full timeline used on vizyon.html */
+.roadmap-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-12);
+}
+
+@media (max-width: 900px) {
+  .roadmap-timeline {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+}
+
+.roadmap-stage {
+  position: relative;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl, var(--radius-lg));
+  padding: var(--spacing-8) var(--spacing-6);
+  overflow: hidden;
+}
+
+.roadmap-stage::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--border-color);
+}
+
+.roadmap-stage.is-current::before {
+  background: linear-gradient(90deg, var(--primary), var(--primary-hover));
+}
+
+.roadmap-stage.is-next::before {
+  background: linear-gradient(90deg, var(--secondary), #67e8e0);
+}
+
+.roadmap-stage.is-future::before {
+  background: linear-gradient(90deg, var(--text-muted), var(--border-color));
+}
+
+.roadmap-stage-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-3);
+}
+
+.roadmap-stage.is-current .roadmap-stage-label {
+  color: var(--primary);
+}
+
+.roadmap-stage.is-next .roadmap-stage-label {
+  color: var(--secondary);
+}
+
+.roadmap-stage h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-3);
+}
+
+.roadmap-stage p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.roadmap-stage ul {
+  margin-top: var(--spacing-4);
+  padding-left: 1.1rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.9;
 }

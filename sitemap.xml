@@ -26,6 +26,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Vizyon / Yol Haritası -->
+  <url>
+    <loc>https://ucretsiz.ai/vizyon.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sohbet Sayfası -->
+  <url>
+    <loc>https://ucretsiz.ai/chat.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 
   <!-- Hakkımızda -->
   <url>

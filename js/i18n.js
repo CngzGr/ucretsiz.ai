@@ -16,6 +16,7 @@ const I18n = (() => {
     'nav.chat': { tr: 'Chat', en: 'Chat' },
     'nav.about': { tr: 'Hakkımızda', en: 'About' },
     'nav.compare': { tr: 'Karşılaştır', en: 'Compare' },
+    'nav.vision': { tr: 'Vizyon', en: 'Vision' },
 
     // Hero
     'hero.title': { tr: "Türkiye'nin Ücretsiz AI Platformu", en: "Turkey's Free AI Platform" },
